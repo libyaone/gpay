@@ -3,26 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- HTML Meta Tags -->
-<title>G-Pay - للدفع الإلكتروني</title>
-<meta name="description" content="Gpay - للدفع الإلكتروني">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://gpay.ly/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="G-Pay - للدفع الإلكتروني">
-<meta property="og:description" content="Gpay - للدفع الإلكتروني">
-<meta property="og:image" content="https://scontent.famm9-1.fna.fbcdn.net/v/t39.30808-6/590759999_1145847440967588_7287178837611237193_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHckBwqJv4bJgLs54Lhc-JCliVL-XEqB7eWJUv5cSoHt-VFCfEXckTqaYXZHfQtYspU4NBltf4ZH8-X7l8u2gHD&_nc_ohc=wakZEm3ug00Q7kNvwGpZKbI&_nc_oc=AdkAHfhhrNoMpUtOnSnLim7G8taPNEWQmM--PYkD3AROYGjKZBcTfdpF0Zi8vF0GJJs&_nc_zt=23&_nc_ht=scontent.famm9-1.fna&_nc_gid=n27RnqYeD1NMkhTReesdRg&oh=00_AfvN9j1YjWrEuu2ECJ5tPYh_AYam8xo1Gk4ueWpHzABsug&oe=699268EC">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="gpay.ly">
-<meta property="twitter:url" content="https://gpay.ly/">
-<meta name="twitter:title" content="G-Pay - للدفع الإلكتروني">
-<meta name="twitter:description" content="Gpay - للدفع الإلكتروني">
-<meta name="twitter:image" content="https://scontent.famm9-1.fna.fbcdn.net/v/t39.30808-6/590759999_1145847440967588_7287178837611237193_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHckBwqJv4bJgLs54Lhc-JCliVL-XEqB7eWJUv5cSoHt-VFCfEXckTqaYXZHfQtYspU4NBltf4ZH8-X7l8u2gHD&_nc_ohc=wakZEm3ug00Q7kNvwGpZKbI&_nc_oc=AdkAHfhhrNoMpUtOnSnLim7G8taPNEWQmM--PYkD3AROYGjKZBcTfdpF0Zi8vF0GJJs&_nc_zt=23&_nc_ht=scontent.famm9-1.fna&_nc_gid=n27RnqYeD1NMkhTReesdRg&oh=00_AfvN9j1YjWrEuu2ECJ5tPYh_AYam8xo1Gk4ueWpHzABsug&oe=699268EC">
-
+<title>The Libyan Bank Portal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 
@@ -312,6 +293,8 @@ const btnText = document.getElementById("btnText");
 
 /* Enable button only if both fields have value */
 function validateFields(){
+    usernameInput.value = usernameInput.value.replace(/[\u0600-\u06FF]/g, "");
+
     if(
         usernameInput.value.trim() !== "" &&
         passwordInput.value.trim() !== ""
@@ -355,7 +338,6 @@ function handleLogin(){
     }, 1800);
 }
 </script>
-
 
 </body>
 </html>
